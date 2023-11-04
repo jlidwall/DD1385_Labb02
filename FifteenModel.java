@@ -52,7 +52,7 @@ public class FifteenModel implements Boardgame{
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n; j++){
                 board[i][j] = String.format("%2d", count);  // format strings to have the same widt
-                count += 1;
+                count++;
             }
         }
 

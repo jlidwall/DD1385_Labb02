@@ -14,7 +14,7 @@ public class ViewControl extends JFrame implements ActionListener {
     private Square[][] board;
     private JTextField mess = new JTextField();
 
-    ViewControl (Boardgame gm, int n){
+    ViewControl (Boardgame gm, int n, String title){
 
         game = gm;
         size = n;
@@ -26,7 +26,7 @@ public class ViewControl extends JFrame implements ActionListener {
         JPanel mainPanel = new JPanel(new GridLayout(2, 1));
         getContentPane().add(mainPanel);
 
-        mess.setText("Hello world");
+        mess.setText(title);
         mess.setEditable(false);
         mainPanel.add(mess);
 
@@ -72,11 +72,11 @@ public class ViewControl extends JFrame implements ActionListener {
         }
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            ViewControl viewControl = new ViewControl(null, 4);
-        });
-    }
+    // public static void main(String[] args) {
+    //     SwingUtilities.invokeLater(() -> {
+    //         ViewControl viewControl = new ViewControl(null, 4);
+    //     });
+    // }
 }
 
 
